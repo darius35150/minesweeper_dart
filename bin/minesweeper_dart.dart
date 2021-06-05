@@ -1,4 +1,5 @@
 import 'game.dart';
+import 'board.dart';
 import 'dart:io';
 
 void main(List<String> arguments) {
@@ -28,13 +29,12 @@ void main(List<String> arguments) {
 
   var game = Game(rows, columns, bombs);
 
-  while(!game.gameOver)
-  {
-    print('Game started please enter row square you want to flip:   ');
+  while (!game.gameOver) {
+    print('Please enter row square you want to flip:   ');
     flipperRowString = stdin.readLineSync();
     flipperRow = int.parse(flipperRowString!);
 
-    print('Which column square you want to flip:   ');
+    print('Which column square do you want to flip:   ');
     flipperColumnString = stdin.readLineSync();
     flipperColumn = int.parse(flipperColumnString!);
 

@@ -6,6 +6,7 @@ class Game {
 
   Game(numberOfRows, numberOfColumns, numberOfBombs) {
     _board = Board(numberOfRows, numberOfColumns, numberOfBombs);
+    _board.printIt();
   }
 
   void playMove(rowIndex, columnIndex) {
