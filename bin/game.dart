@@ -1,28 +1,28 @@
 import 'board.dart';
 
-class Game 
-{
-
+class Game {
   var _board;
+  bool gameOver = false;
 
-  Game(numberOfRows, numberOfColumns, numberOfBombs) 
-  {
+  Game(numberOfRows, numberOfColumns, numberOfBombs) {
     _board = Board(numberOfRows, numberOfColumns, numberOfBombs);
   }
 
-  void playMove(rowIndex, columnIndex) 
-  {
-
+  void playMove(rowIndex, columnIndex) {
     _board.flipTile(rowIndex, columnIndex);
 
     if (_board.playerBoard[rowIndex][columnIndex] == 'B') {
       print('Boom!  Game Over!');
-      _board.print();
+      _board.printIt();
+      gameOver = true;
     } else if (!_board.hasSafeTiles()) {
       print('Congratulations.......You have won!');
+      _board.printIt();
+      gameOver = true;
     } else {
       print('Current Board:');
       _board.printIt();
+      gameOver = false;
     }
   }
 }
