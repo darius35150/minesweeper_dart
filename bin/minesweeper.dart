@@ -1,5 +1,4 @@
 import 'game.dart';
-import 'board.dart';
 import 'dart:io';
 
 void main(List<String> arguments) {

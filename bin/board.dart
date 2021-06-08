@@ -44,12 +44,11 @@ class Board {
     ];
 
     var numberOfRows = _bombBoard.length;
-    // var numberOfColumns = _bombBoard[0].length;
     var numberOfBombs = 0;
     var neighborRowIndex = 0;
     var neighborColumnIndex = 0;
+
     for (var i = 0; i < neighborOffsets.length; i++) {
-      // neighborOffsets.forEach((offset) =>{ 
       neighborRowIndex = rowIndex + neighborOffsets[i][0];
       neighborColumnIndex = columnIndex + neighborOffsets[i][1];
 
@@ -62,7 +61,6 @@ class Board {
         }
       }
     }
-      // });
     return numberOfBombs;
   }
 
